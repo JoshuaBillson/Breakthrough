@@ -72,3 +72,7 @@ crashlytics-build.properties
 /[Aa]ssets/[Ss]treamingAssets/aa/*
 
 Binaries
+WebGL Builds/
+connectwebgl.zip
+webgl_sharing
+

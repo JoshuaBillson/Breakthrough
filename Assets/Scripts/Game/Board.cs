@@ -60,8 +60,10 @@ public class Board : MonoBehaviour {
                 selectedPiece.DropPiece();
                 DeselectPiece();
             }
-            else if (piece != null && selectedPiece != piece && gameController.IsTeamTurnActive(piece.team)) // Select new piece if on same team.
+            else if (piece != null && selectedPiece != piece && gameController.IsTeamTurnActive(piece.team)) { // Select new piece if on same team.
+                selectedPiece.DropPiece();
                 SelectPiece(piece);
+            }
             else if (selectedPiece.CanMoveTo(coords)) // Move selected piece to chosen square if reachable from current position.
                 OnSelectedPieceMoved(coords, selectedPiece);
         }
